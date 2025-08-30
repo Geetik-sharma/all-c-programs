@@ -2,7 +2,9 @@
 #include<vector>
 using namespace std;
 
-//returning the first and last occurnace of an element is sorted array
+//returning the first and last occurnace of an element is sorted array 
+//similar approach can use to find thte total number of occurance of a number in an array by getting the first and last index of target and subtracting first index from last index and adding 1 
+
 
 int rightmostposition(vector<int>& arr,int n, int k){
     //arr is the sorted array n is the number of the elements k is the target element
