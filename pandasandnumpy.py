@@ -128,13 +128,18 @@ condition_array=np.where(numbers>5,"true","false")
 
 
 #addition of row and column in multidimentional array
-original=np.array([[1,2],[3,4]])
-newrow=np.array([5,6])
-with_new_row=np.vstack((original,newrow))  # vstack stack a new vertical(row) element to original array where 1st given argument is (jisme add karna hai) original array and second argument(jo add karna hai) new row element
-print("original : ", original)
-print("with new row : ",with_new_row)
+# original=np.array([[1,2],[3,4]])
+# newrow=np.array([5,6])
+# with_new_row=np.vstack((original,newrow))  # vstack stack a new vertical(row) element to original array where 1st given argument is (jisme add karna hai) original array and second argument(jo add karna hai) new row element
+# print("original : ", original)
+# print("with new row : ",with_new_row)
 
-newcol=np.array([[7],[8]])
-with_new_Col=np.hstack((original,newcol))
-print("original : ", original)
-print("with new col : ",with_new_Col)
+# newcol=np.array([[7],[8]]) # hastack add new column
+# with_new_Col=np.hstack((original,newcol))
+# print("original : ", original)
+# print("with new col : ",with_new_Col)
+
+#delete operation
+arr=np.array([1,2,3,4])
+deleted=np.delete(arr,[2]) #this will delete the element at given index of it will also cal delete elements by start stop and step method
+print(deleted) #and deleted array will be stored not deleted element
