@@ -82,12 +82,59 @@ import time
 #             arr[j]=store
 #sort=np.sort(arr)
 # print("sorted array", sort)
-unsorted=np.array([[1,6,2,0],[4,8,7,9],[9,1,2,6]])
-print("sorted matrix by column",np.sort(unsorted,axis=0))
-print("sorted matrix by row",np.sort(unsorted,axis=1))
-unsorted=np.sort(unsorted,axis=0)
-unsorted=np.sort(unsorted,axis=1)
-print("completly sorted array by row and column",unsorted)
+# unsorted=np.array([[1,6,2,0],[4,8,7,9],[9,1,2,6]])
+# print("sorted matrix by column",np.sort(unsorted,axis=0))
+# print("sorted matrix by row",np.sort(unsorted,axis=1))
+# unsorted=np.sort(unsorted,axis=0)
+# unsorted=np.sort(unsorted,axis=1)
+# print("completly sorted array by row and column",unsorted)
+
+#filtering of array
+numbers=np.array([1,2,3,4,5,6,7,8,9,10])
+# even_number=numbers[numbers%2==0]
+# print(even_number)
+
+#filter with mask(mask is expression which evaluate)
+# mask=numbers>5
+# print("numbers greater then 5",numbers[mask])
+
+#where clause
+#np.where()
+# indices=[0,1,2]
+# print("at indices",numbers[indices])
+# where_result=np.where(numbers>5)
+# print("where",numbers[where_result])
+condition_array=np.where(numbers>5,"true","false") 
+
+# np.where (<condition>,<block if condition is true>,<block if condition is false>)  and if false and true block is not given default the elements are returned
+#print("condition array" , condition_array)
+
+#adding and removing data
+
+# arr1=np.array([1,2,3])
+# arr2=np.array([4,5,6])
+# print("sum of individual element of array : ",arr1+arr2)
+# concatinate=np.concatenate((arr1,arr2))
+# print("concatinated array is : ",concatinate)
 
 
-    
+#array compatibility
+# arr1=np.array([1,2,3])
+# arr2=np.array([4,5,6])
+# arr3=np.array([7,8,9,10])
+
+# print("compatibility of shapes : ",arr1.shape==arr2.shape)
+# print("compatibility of shapes : ",arr1.shape==arr3.shape)
+
+
+#addition of row and column in multidimentional array
+original=np.array([[1,2],[3,4]])
+newrow=np.array([5,6])
+with_new_row=np.vstack((original,newrow))  # vstack stack a new vertical(row) element to original array where 1st given argument is (jisme add karna hai) original array and second argument(jo add karna hai) new row element
+print("original : ", original)
+print("with new row : ",with_new_row)
+
+newcol=np.array([[7],[8]])
+with_new_Col=np.hstack((original,newcol))
+print("original : ", original)
+print("with new col : ",with_new_Col)
