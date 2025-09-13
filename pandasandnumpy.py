@@ -140,6 +140,6 @@ condition_array=np.where(numbers>5,"true","false")
 # print("with new col : ",with_new_Col)
 
 #delete operation
-arr=np.array([1,2,3,4])
-deleted=np.delete(arr,[2]) #this will delete the element at given index of it will also cal delete elements by start stop and step method
-print(deleted) #and deleted array will be stored not deleted element
+# arr=np.array([1,2,3,4])
+# deleted=np.delete(arr,[2]) #this will delete the element at given index of it will also cal delete elements by start stop and step method
+# print(deleted) #and deleted array will be stored not deleted element
