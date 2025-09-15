@@ -2,25 +2,32 @@
 #include<vector>
 using namespace std;
 int main(){
-    vector<int>v1={1,2,3,4,5,6};
-    int position=3;
-    vector<int>reverse(v1.size());
-    for(int i=0;i<v1.size();i++){
-       if(i<=position){
-        reverse[i]=v1[i];
-       }
-    }
-    int end=v1.size()-1;
-    while (position<=end)
+    vector<int>v1={1,2,6,8,9};
+    vector<int>v2={3,4,5,7};
+   
+    vector<int>v3;
+    int st1=0;
+    int st2=0;
+    while (st1<v1.size() && st2<v2.size())
     {
-        reverse[position+1]=v1[end];
-        position++;
-        end--;
-        
-     }
-    
-   for(int i: reverse){
+        if(v1[st1]<v2[st2]){
+            v3.push_back(v1[st1]);
+            st1++;
+        }
+        else{
+            v3.push_back(v2[st2]);
+            st2++;
+        }
+
+    }
+        while (st1 < v1.size()) {
+        v3.push_back(v1[st1]);
+        st1++;
+    }
+
+    for(int i: v3){
         cout<<i<<", ";
     }
     cout<<endl;
+
 }
