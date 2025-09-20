@@ -244,4 +244,62 @@ using namespace std;
 //     }
 // }
 
-// 
+// merge two sorted array
+// vector<int> merge(vector<int>&arr1,vector<int>&arr2);
+// int main(){
+//     vector<int>arr1={1,3,5,6,9};
+//     vector<int>arr2={2,4,7,8};
+//     vector<int>ans=merge(arr1,arr2);
+//     for(int i : ans){
+//         cout<<i<<",";
+//     }
+//     cout<<endl;
+// }
+// vector<int> merge(vector<int>&arr1,vector<int>&arr2){
+//     int n1=arr1.size();
+//     int n2=arr2.size();
+//     vector<int>ans;
+//     int i=0,j=0;
+//     while(i<n1 && j<n2){
+//         if(arr1[i]<arr2[j]){
+//             ans.push_back(arr1[i]);
+//             i++;
+//         }
+//         else{
+//             ans.push_back(arr2[j]);
+//             j++;
+//         }
+//     }
+//     while(i<n1){
+//         ans.push_back(arr1[i]);
+//         i++;
+//     }
+//     while (j<n2)
+//     {
+//         ans.push_back(arr2[j]);
+//         j++;
+//     }
+//     return ans;
+// }
+
+//moving zeros
+int main(){
+    vector<int>arr={0,1,0,3,12};
+    //variable to maintain zeros position
+    int posi=0;
+    for(int i=0 ;i<arr.size();i++){
+        
+        if(arr[i]!=0){
+           swap(arr[i],arr[posi]);
+           posi++;
+        }
+    }
+    for(int i:arr){
+        cout<<i<<",";
+    }
+    cout<<endl;
+}
+
+
+
+
