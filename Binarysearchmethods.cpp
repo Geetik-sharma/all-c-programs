@@ -1,6 +1,7 @@
 #include <iostream>
 #include<vector>
 #include<climits>
+#include<algorithm>
 using namespace std;
 
 // //returning the first and last occurnace of an element is sorted array 
@@ -283,23 +284,90 @@ using namespace std;
 // }
 
 //moving zeros
+// int main(){
+//     vector<int>arr={0,1,0,3,12};
+//     //variable to maintain zeros position
+//     int posi=0;
+//     for(int i=0 ;i<arr.size();i++){
+//         if(arr[i]!=0){
+//            swap(arr[i],arr[posi]);
+//            posi++;
+//         }
+//     }
+//     for(int i:arr){
+//         cout<<i<<",";
+//     }
+//     cout<<endl;
+// }
+
+//rotating a array
+// int main(){
+//     vector<int>main={1,2,3,4,5,6,7,8,9};
+//     vector<int>ans(main.size());
+//     int k=3,m=0;
+//     for(int i=0;i<main.size();i++){
+//         if(k+i<main.size()){
+//             ans[i+k]=main[i];
+//         }
+//         else{
+//             ans[m]=main[i];
+//             m++;
+//         }
+//     }
+//     for(int i :ans){
+//         cout<<i<<",";
+//     }
+//     cout<<endl;
+// }
+
+// //checking a array is rotated and sorted
+// #define no cout<<"no"<<endl
+// #define yes cout<<"yes"<<endl
+// int main(){
+//     vector<int>arr={3,4,5,1,2};
+//     int count=0;
+//     for(int i=1;i<arr.size();i++){
+//         if(arr[i-1]>arr[i]){
+//             count++;
+//         }
+//     }
+//     if(count<=1){
+//         yes;
+//     }
+//     else{
+//         no;
+//     }
+// }
+
+// sum of two arrays
+
 int main(){
-    vector<int>arr={0,1,0,3,12};
-    //variable to maintain zeros position
-    int posi=0;
-    for(int i=0 ;i<arr.size();i++){
-        
-        if(arr[i]!=0){
-           swap(arr[i],arr[posi]);
-           posi++;
-        }
+    vector<int>v1={4,5,1};
+    vector<int>v2={3,4,5};
+    vector<int>ans;
+    int size_v1=v1.size()-1;
+    int size_v2=v2.size()-1;
+    while (size_v1>=0 && size_v2>=0)
+    {
+        ans.push_back(v1[size_v1]+v2[size_v2]);
+        size_v1--;
+        size_v2--;
     }
-    for(int i:arr){
+    while (size_v1>=0)
+    {
+        ans.push_back(v1[size_v1]);
+        size_v1--;
+    }
+    while (size_v2>=0)
+    {
+        ans.push_back(v2[size_v2]);
+        size_v2--;
+    }
+    reverse(ans.begin(),ans.end());
+    for(int i:ans){
         cout<<i<<",";
     }
     cout<<endl;
 }
-
-
 
 
