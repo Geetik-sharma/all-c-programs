@@ -340,16 +340,38 @@ using namespace std;
 // }
 
 // sum of two arrays
-
 int main(){
     vector<int>v1={4,5,1};
     vector<int>v2={3,4,5};
     vector<int>ans;
+    int carry=0;
     int size_v1=v1.size()-1;
     int size_v2=v2.size()-1;
     while (size_v1>=0 && size_v2>=0)
     {
-        ans.push_back(v1[size_v1]+v2[size_v2]);
+        if((v1[size_v1]+v2[size_v2])/10==0){
+            int sum=(v1[size_v1]+v2[size_v2]);
+            if(carry==0){
+                ans.push_back(sum);
+            }
+            else{
+                sum+=carry;
+                ans.push_back(sum%10);
+                carry=sum/10;
+            }
+        }
+        else if((v1[size_v1]+v2[size_v2])/10>0){
+            int sum=(v1[size_v1]+v2[size_v2]);
+            if(carry>0){
+                sum+=carry;
+                ans.push_back(sum%10);
+                carry=0;
+            }
+            else{
+                ans.push_back(sum);
+            }
+            carry=(v1[size_v1]+v2[size_v2])/10;
+        }
         size_v1--;
         size_v2--;
     }
