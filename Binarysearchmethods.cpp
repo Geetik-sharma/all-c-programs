@@ -340,31 +340,30 @@ using namespace std;
 // }
 
 // sum of two arrays
-int main(){
-    vector<int> v1 = {9,9,9};
-    vector<int> v2 = {1};
-
-    int carry=0;
-    int size1=v1.size()-1;
-    int size2=v2.size()-1;
-    vector<int>ans;
-    while(size1>=0 || size2>=0){
-        int d1=(size1>=0)?v1[size1]:0;
-        int d2=(size2>=0)?v2[size2]:0;
-        int sum=d1+d2+carry;
-        ans.push_back(sum%10);
-        carry=sum/10;
-        size1--;
-        size2--;
-    }
-    if(carry>0){
-        ans.push_back(carry);
-    }
-    reverse(ans.begin(),ans.end());
-    for(int i:ans){
-        cout<<i<<",";
-    }
-    cout<<endl;
-}
+// int main(){
+//     vector<int> v1 = {9,9,9};
+//     vector<int> v2 = {1};
+//     int carry=0;
+//     int size1=v1.size()-1;
+//     int size2=v2.size()-1;
+//     vector<int>ans;
+//     while(size1>=0 || size2>=0){
+//         int d1=(size1>=0)?v1[size1]:0;
+//         int d2=(size2>=0)?v2[size2]:0;
+//         int sum=d1+d2+carry;
+//         ans.push_back(sum%10);
+//         carry=sum/10;
+//         size1--;
+//         size2--;
+//     }
+//     if(carry>0){
+//         ans.push_back(carry);
+//     }
+//     reverse(ans.begin(),ans.end());
+//     for(int i:ans){
+//         cout<<i<<",";
+//     }
+//     cout<<endl;
+// }
 
 
