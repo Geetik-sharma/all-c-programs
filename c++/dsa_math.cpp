@@ -45,5 +45,42 @@ using namespace std;
 //         }
 //     }
 //     cout<<count<<endl;
-
 // }
+
+// GCD
+// int GCD(int a,int b);
+// int main(){
+//     int a,b;
+//     cout<<"enter the first number\n";
+//     cin>>a;
+//     cout<<"enter the second number"<<endl;
+//     cin>>b;
+//     cout<<"gcd of "<<a<<", "<<b<<" is "<<GCD(a,b)<<endl;
+// }
+// int GCD(int a, int b){
+//     if(b==0){
+//         return a;
+//     }
+//     return GCD(b,a%b);
+// }
+
+// FAST EXPONENTIATION
+// 1. Binary Exponentiation
+int main(){
+    long long result=1;
+    long long number,power;
+    cin>>number;
+    cin>>power;
+    while(power>0){
+        if(power & 1){
+            result *= number;
+            cout<<"reuslt = "<<result<<endl;
+        }
+        number *= number;
+        cout<<"number = "<<number<<endl;
+        cout<<"power = "<<power<<endl;
+        power = power >> 1;
+        cout<<endl;
+    }
+    cout<<result<<endl;
+}
