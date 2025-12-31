@@ -66,21 +66,22 @@ using namespace std;
 
 // FAST EXPONENTIATION
 // 1. Binary Exponentiation
-int main(){
-    long long result=1;
-    long long number,power;
-    cin>>number;
-    cin>>power;
-    while(power>0){
-        if(power & 1){
-            result *= number;
-            cout<<"reuslt = "<<result<<endl;
-        }
-        number *= number;
-        cout<<"number = "<<number<<endl;
-        cout<<"power = "<<power<<endl;
-        power = power >> 1;
-        cout<<endl;
-    }
-    cout<<result<<endl;
-}
+// int main(){
+//     long long result=1;
+//     long long number,power;
+//     cin>>number;
+//     cin>>power;
+//     while(power>0){
+//         if(power & 1){
+//             result *= number;
+//             cout<<"reuslt = "<<result<<endl;
+//         }
+//         number *= number;
+//         cout<<"number = "<<number<<endl;
+//         cout<<"power = "<<power<<endl;
+//         power = power >> 1;
+//         cout<<endl;
+//     }
+//     cout<<result<<endl;
+// }
+
